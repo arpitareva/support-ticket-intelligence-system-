@@ -20,17 +20,17 @@ from app.utils.errors import AppError
 
 logger = logging.getLogger(__name__)
 
-# DESCRIPTION = """
-# Customer Support Ticket Intelligence System.
+DESCRIPTION = """
+Customer Support Ticket Intelligence System.
 
-# Natural-language questions are translated by an LLM into a **validated
-# structured query plan**, which a deterministic SQL engine executes against
-# SQLite. The model never computes a statistic and never writes SQL, so every
-# number returned is reproducible from the dataset.
+Natural-language questions are translated by an LLM into a **validated
+structured query plan**, which a deterministic SQL engine executes against
+SQLite. The model never computes a statistic and never writes SQL, so every
+number returned is reproducible from the dataset.
 
-# Anomaly detection is entirely deterministic and reports the threshold and
-# reference time behind every flag.
-# """
+Anomaly detection is entirely deterministic and reports the threshold and
+reference time behind every flag.
+"""
 
 
 def configure_logging(level: str) -> None:
