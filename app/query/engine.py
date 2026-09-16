@@ -1,12 +1,3 @@
-"""Deterministic query engine.
-
-Every number the system reports is produced here, from SQL over SQLite (plus
-NumPy for percentiles, which SQLite lacks). The LLM's only influence is the
-validated ``QueryPlan``; this module maps plan enums to SQL fragments through
-lookup tables, so no user-supplied string ever becomes SQL. All literals are
-bound as parameters.
-"""
-
 from __future__ import annotations
 
 import logging
@@ -175,14 +166,8 @@ class QueryEngine:
         time_range: TimeRange,
         any_of: list[Filter] | None = None,
     ) -> tuple[str, list[Any]]:
-        """Build ``WHERE`` from ANDed filters plus one optional OR block.
 
-        ``any_of`` exists because some real questions are genuinely
-        disjunctive - "Critical tickets not resolved within 12 hours" covers
-        both slow resolutions and tickets still open. It is a single OR group
-        ANDed with the rest, which is enough for those cases without turning
-        the plan into an arbitrary expression tree.
-        """
+
         clauses: list[str] = []
         params: list[Any] = []
         for f in filters:

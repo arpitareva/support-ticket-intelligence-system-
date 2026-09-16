@@ -441,7 +441,7 @@ support-ticket-ai/
 Requires Python 3.10+.
 
 ```bash
-git clone <>
+git clone <https://github.com/arpitareva/support-ticket-intelligence-system-.git>
 cd support-ticket-ai
 
 python -m venv .venv

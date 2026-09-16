@@ -1,17 +1,3 @@
-"""LLM service.
-
-Provider-specific code lives here and nowhere else. Every provider exposes the
-same method - ``complete_json(system, messages) -> raw text`` - so switching
-from Groq to a local Ollama model is a configuration change, not a code change.
-
-Providers:
-  groq       - Groq free tier (OpenAI-compatible endpoint), the default.
-  ollama     - local Ollama server, for fully offline operation.
-  rule_based - a small deterministic planner. NOT an LLM: it exists so the
-               system can be demonstrated and tested without network access or
-               an API key. It is opt-in (LLM_PROVIDER=rule_based) and reports
-               itself honestly in /health and in every response's metadata.
-"""
 
 from __future__ import annotations
 

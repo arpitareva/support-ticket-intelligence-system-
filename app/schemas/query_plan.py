@@ -1,12 +1,3 @@
-"""The structured query plan.
-
-This module is the contract between the LLM and the deterministic query
-engine. The LLM never sees the database and never emits SQL; it emits a
-``QueryPlan`` which is validated here against closed enums (fields,
-operators, aggregations). Anything outside those enums is rejected before a
-single byte reaches SQLite, which is what makes prompt injection and
-arbitrary SQL structurally impossible rather than merely discouraged.
-"""
 
 from __future__ import annotations
 

@@ -1,17 +1,3 @@
-"""Prompt construction for query planning.
-
-Design notes:
-
-* The model is given the *schema*, the *closed value vocabularies* and the
-  dataset's reference date, so it never has to guess what "this month" or
-  "unresolved" means.
-* It is told to emit JSON only. Output is then validated by Pydantic, so a
-  malformed or adversarial response fails closed instead of reaching SQLite.
-* User text is passed as a user message and explicitly framed as data to be
-  translated, not as instructions to be followed - the standing defence
-  against prompt injection is that the *only* accepted output shape is a
-  QueryPlan over whitelisted enums.
-"""
 
 from __future__ import annotations
 

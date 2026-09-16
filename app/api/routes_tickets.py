@@ -1,10 +1,3 @@
-"""Direct ticket access and dataset statistics.
-
-These endpoints bypass the LLM entirely: the UI dashboard and any programmatic
-consumer should not pay for a model round-trip to fetch a filtered page of
-rows or headline counts.
-"""
-
 from __future__ import annotations
 
 import logging

@@ -1,5 +1,4 @@
-# Optional convenience wrapper. The application runs fine without Docker -
-# see the README "Run locally" section.
+
 services:
   support-ticket-ai:
     build: .

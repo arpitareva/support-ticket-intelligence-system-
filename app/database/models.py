@@ -1,9 +1,3 @@
-"""Physical schema for the tickets table.
-
-Kept as plain DDL (no ORM): the application has exactly one table and never
-performs writes at request time, so an ORM would add a dependency and an
-indirection layer without removing any work. See README - "Why no ORM".
-"""
 
 from __future__ import annotations
 

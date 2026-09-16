@@ -1,9 +1,3 @@
-"""Central application configuration.
-
-All environment-driven settings live here so that no module has to read
-``os.environ`` directly. This keeps provider-specific details (API keys,
-model names, base URLs) out of the business logic.
-"""
 
 from __future__ import annotations
 

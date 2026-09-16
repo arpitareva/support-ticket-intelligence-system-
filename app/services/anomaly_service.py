@@ -1,18 +1,3 @@
-"""Deterministic anomaly detection.
-
-No LLM is involved. Every rule states the metric it used, the threshold it
-compared against, and how that threshold was derived, so a reviewer can
-reproduce any flag by hand.
-
-Reference time
---------------
-The dataset is historical (Jan-Mar 2024). Measuring ticket age against
-``datetime.now()`` would make every unresolved ticket years old and the
-"older than 24 hours" rule vacuous. The default reference time is therefore
-the latest ``created_at`` in the dataset - the moment the extract was taken.
-``ANOMALY_REFERENCE_TIME`` can be set to ``now`` or to a fixed ISO timestamp
-for a live deployment. Whichever is used is reported in the API response.
-"""
 
 from __future__ import annotations
 

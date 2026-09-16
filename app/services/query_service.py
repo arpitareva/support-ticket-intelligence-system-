@@ -1,13 +1,3 @@
-"""Natural-language query service.
-
-The orchestration layer for the pipeline the README describes:
-
-    question -> LLM -> QueryPlan -> Pydantic validation -> query engine
-             -> SQLite -> exact rows -> templated answer
-
-Note what is *not* here: no branch anywhere lets the model's prose become the
-answer. If planning fails, the caller gets an error.
-"""
 
 from __future__ import annotations
 

@@ -1,11 +1,3 @@
-"""Response generation.
-
-The final sentence the user reads is assembled here from the *engine's*
-numbers using templates. The LLM is deliberately not asked to write it: a
-model that paraphrases "3.48" as "roughly 3.5, which is quite low" has
-introduced an unverifiable claim. Templates cost some fluency and buy exact
-numbers every time.
-"""
 
 from __future__ import annotations
 

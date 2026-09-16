@@ -1,14 +1,3 @@
-"""SQLite access.
-
-Two responsibilities:
-
-1. ``build_database`` - one-time load of the validated DataFrame into SQLite.
-2. ``TicketDatabase.connect`` - hand out **read-only** connections for every
-   request path. The connection is opened with ``mode=ro`` and additionally
-   pinned with ``PRAGMA query_only``, so even a bug in the query builder
-   cannot mutate or drop data.
-"""
-
 from __future__ import annotations
 
 import logging

@@ -1,9 +1,4 @@
-"""Composition root.
 
-Wiring lives here so routes can depend on small interfaces and tests can
-build the whole stack against a temporary CSV/SQLite file without touching
-FastAPI.
-"""
 
 from __future__ import annotations
 
